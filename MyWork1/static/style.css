@@ -1,0 +1,184 @@
+/* Reset default browser styles */
+body, h1, h2, h3, p, ul, li, button, select, input, label {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* Header styles */
+header {
+    background-color: #2D2E31;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: large;
+    text-shadow: 2px 2px 2px #999;
+    align-items: center;
+    align-self: center;
+}
+
+header h1:hover {
+    text-shadow: 2px 2px 2px orange;
+}
+
+img {
+    height: auto;
+    float: left;
+}
+
+header img {
+    max-width: 120px; /* Adjust the logo size as needed */
+    margin-right: 0px;
+    color: #fff;
+    background-color: #f2f2f2;
+    border-radius: 10x;
+}
+
+header img:hover {
+    box-shadow: 1px 1px 1px 1px orange;
+}
+
+/* Sidebar styles */
+.sidebar {
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 325px;
+    height: 500px;
+    float: left;
+}
+
+/* Map styles */
+.map {
+    width: 1100px;
+    float: right;
+    height: 540px; /* Adjust the map height as needed */
+    align-self: center;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #2D2E31;
+    margin-top: 4px;
+    z-index: 0;
+    
+}
+
+.map:hover {
+    box-shadow: 1px 1px 1px 1px orange;
+}
+
+
+
+/* Footer styles */
+.footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    clear: both;
+    text-align: right;
+
+
+}
+
+.filter * {
+    background-color:#fff ;
+    color: #2D2E31;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 14px;
+    border-color: #2D2E31;
+}
+
+.filter *:hover {
+    box-shadow: 1px 1px 1px 1px orange;
+}
+
+
+
+.footer h2 {
+    margin-bottom: 10px;
+}
+
+/* Button styles */
+button {
+    background-color: #2D2E31;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px;   
+    border-radius: 5px 5px 5px 5px;
+    align-content: right;
+    cursor: pointer;
+    
+}
+
+button:hover {
+    opacity: 0.7;
+    box-shadow: 1px 1px 1px 1px orange;
+}
+
+
+#country-search {
+    width: 160px;
+    padding: 12px;
+    margin: 8px;
+    border: 2px solid #2D2E31;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #f2f2f2;
+    color: #2D2E31;
+}
+
+#country:hover {
+    box-shadow: 1px 1px 1px 1px orange;
+}
+
+#search-button {
+    width: 100px;
+}
+
+
+
+/* Style the popup container */
+.popup-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Style the popup */
+.popup {
+    display: none;
+    position: absolute; /* Changed to absolute positioning */
+    bottom: 100%; /* Position below the button */
+    right: 100%;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1;
+    font-size: 11px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+/* Show the popup when hovering over the button */
+.popup-container:hover .popup {
+    display: block;
+}
+
+label {
+    font-size: 14px;
+    color: #2D2E31;
+    font-weight: bold;
+    margin: 10px;
+}
+
+
+

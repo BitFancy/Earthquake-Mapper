@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthquake Monitoring</title>
+    <link rel="stylesheet" href="static/style.css">
+    <!-- Include Leaflet CSS and JavaScript -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="https://trupt.com.tr/media/p3jhckp1/logo-2x.png" alt="Logo">
+        <h1>Earthquake Monitoring</h1>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Add your filter elements here (e.g., time slider, region slicer, magnitude slicer) -->
+        <div class="filter">
+        
+            <label for="magnitude-slicer">Magnitude</label>
+            <select id="magnitude-slicer">
+                <option value="all">All</option>
+                <option value="3">3<</option>
+                <option value="4">4<</option>
+                <option value="5">5<</option>
+                <option value="6">6<</option>
+                <option value="7">7<</option>
+                <option value="8">8+</option>
+            </select>
+                
+            <label for="depth-slicer">Depth</label>
+            <select id="depth-slicer">
+                <option >All</option>
+                <option value="0">0<</option>
+                <option value="25">25<</option>
+                <option value="50">50<</option>
+                <option value="100">100<</option>
+                <option value="250">250<</option>
+                <option value="500">500<</option>
+                <option value="1000">1000+</option>
+            </select>
+
+            <!-- adding map styles-->
+            <label for="map-style">Map Style</label>
+            <select id="map-style" name="map-style">
+                <option >Reset</option>
+                <option value="Street" >Street</option>
+                <option value="Dark" >Dark</option>
+                <option value="Light" >Light</option>
+                <option value="Satellite" >Satellite</option>
+            </select> 
+    
+        </div>
+                <!-- Add more options as needed -->
+    </div>
+    
+
+    <!-- Map Container -->
+    <div id="map" class="map"></div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <!-- Buttons for last earthquake, last hour, last day, etc. -->
+        <div class="popup-container">
+            <button id="last-earthquake-button">Last Earthquakes</button>
+            <div class="popup">This button shows last 10 earthquake in the world.</div>
+        </div>
+        <div class="popup-container">
+            <button id="last-hour-button">Last Hour</button>
+            <div class="popup">This Button shows earthquakes happened over the world in last hour.</div>
+        </div>
+        <div class="popup-container">
+            <button id="last-day-button">Last Day</button>
+            <div class="popup">This Button shows earthquakes happened over the world in last day</div>
+        </div>
+        <div class="popup-container">
+            <button id="last-week-button">Last Week</button>
+            <div class="popup">This Button shows earthquakes happened over the world in last week</div>
+        </div>
+        <div class="popup-container">
+            <button id="last-month-button">Last Month</button>
+            <div class="popup">This Button shows earthquakes happened over the world in last month but it is limited 3000 earthquakes</div>
+        </div>
+        <div class="popup-container">
+            <button id ="last-year-button">Last 20 Years</button>
+            <div class="popup">This Button shows earthquakes happened over the world in last 20 years but it is limited 5000 earthquakes and 
+                shows only earthquakes which has over 7 magnitude. 
+            </div>
+        </div>
+        <div class="popup-container">
+            <button id="Fault-line">Fault Line</button>
+            <div class="popup">This Button shows fault lines over the world.</div>
+        </div>
+        <div class="popup-container">
+            <button id="buffer-zone">Buffer Zone</button>
+            <div class="popup">This Button shows buffer zone of last 500 earthquakes which has more than 3 magnitude.</div>
+        </div>
+        
+        <!-- Add more buttons and actions as needed -->
+    </div>
+
+    <!-- JavaScript for interactivity -->
+    <script src="static/app1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+</body>
+</html>
